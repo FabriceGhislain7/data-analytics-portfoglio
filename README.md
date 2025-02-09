@@ -14,6 +14,5 @@ This repository contains a **Data Analysis project** focused on the Titanic data
 2. Run the cells to explore and visualize the dataset.
 3. Modify or extend the analysis as needed.
 
----
 
 💡 **Future updates**: More data projects will be added soon!
