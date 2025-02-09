@@ -10,7 +10,7 @@ This repository contains a **Data Analysis project** focused on the Titanic data
 - 📊 **Tools Used**: Python, Pandas, Matplotlib, Seaborn, Excel.
 - 📁 **Files**:
   - "main.ipynb" → Jupyter Notebook with data exploration & visualization.
-  - "data_titanic.xls" → Dataset used for the analysis.
+  - "data_titanic.csv" → Dataset used for the analysis.
 
 ## 🚀 How to Use:
 1. Open "main.ipynb" in Jupyter Notebook.
