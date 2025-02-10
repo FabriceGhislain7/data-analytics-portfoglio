@@ -5,12 +5,14 @@
 This project provides a **comprehensive and structured analysis** of the Titanic dataset, utilizing **Python** and **Jupyter Notebooks** for **Exploratory Data Analysis (EDA)** and **Machine Learning (ML)**. It is designed for both **beginners and advanced users**, offering **detailed explanations, clean code, and meaningful insights** into passenger survival predictions.  
 
 
+
 **📂 Project Overview**  
 - **Objective**: Analyze passenger survival rates based on different factors and build predictive models.  
 - **Tools Used**: Python, Pandas, Matplotlib, Seaborn, Scikit-learn.  
 - **Files**:  
   - `main.ipynb` → Jupyter Notebook for data exploration, visualization, and modeling.  
   - `data_titanic.csv` → Dataset used for analysis.  
+
 
 
 **🔍 Why is This Project Useful?**  
@@ -21,6 +23,7 @@ This project provides a **comprehensive and structured analysis** of the Titanic
 - **Google Colab Integration**: Run it directly in **Google Colab** with no setup required.  
 
 
+
 **📌 Key Features**  
 
 **1️⃣ Exploratory Data Analysis (EDA)**  
@@ -28,6 +31,7 @@ This project provides a **comprehensive and structured analysis** of the Titanic
 - **Statistical Analysis**: Summary statistics, distribution analysis, and correlation matrix evaluation.  
 - **Data Visualization**: Histograms, boxplots, KDE plots, and correlation heatmaps using Matplotlib and Seaborn.  
 - **Bivariate Analysis**: Investigating relationships between survival and factors like class, age, gender, and fare.  
+
 
 **2️⃣ Data Science & Machine Learning**  
 - **Feature Engineering**: Creating new variables such as Family Size, Title Extraction, and Fare Categories.  
@@ -37,12 +41,14 @@ This project provides a **comprehensive and structured analysis** of the Titanic
 - **Model Evaluation**: Comparing accuracy, precision, recall, F1-score, and ROC-AUC scores.  
 
 
+
 **🚀 How to Get Started**  
 
 1. **Clone or download the repository** and open the Jupyter notebook.  
 2. If using **Google Colab**, click on the **"Open in Colab"** button above to run the notebook online.  
 3. Run each cell in sequence to explore, visualize, and analyze the dataset.  
 4. Modify the code to experiment with different preprocessing methods and algorithms.  
+
 
 
 **📂 Dataset Information**  
