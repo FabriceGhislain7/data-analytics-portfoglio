@@ -4,7 +4,6 @@
 
 This project provides a **comprehensive and structured analysis** of the Titanic dataset, utilizing **Python** and **Jupyter Notebooks** for **Exploratory Data Analysis (EDA)** and **Machine Learning (ML)**. It is designed for both **beginners and advanced users**, offering **detailed explanations, clean code, and meaningful insights** into passenger survival predictions.  
 
----
 
 **📂 Project Overview**  
 - **Objective**: Analyze passenger survival rates based on different factors and build predictive models.  
@@ -13,7 +12,6 @@ This project provides a **comprehensive and structured analysis** of the Titanic
   - `main.ipynb` → Jupyter Notebook for data exploration, visualization, and modeling.  
   - `data_titanic.csv` → Dataset used for analysis.  
 
----
 
 **🔍 Why is This Project Useful?**  
 - **Step-by-step structured approach**: Guides users through **EDA, feature engineering, and machine learning**.  
@@ -22,7 +20,6 @@ This project provides a **comprehensive and structured analysis** of the Titanic
 - **Hands-on learning**: Users can modify the code to enhance their understanding of data science concepts.  
 - **Google Colab Integration**: Run it directly in **Google Colab** with no setup required.  
 
----
 
 **📌 Key Features**  
 
@@ -39,7 +36,6 @@ This project provides a **comprehensive and structured analysis** of the Titanic
 - **Hyperparameter Tuning**: Optimizing models using GridSearchCV and RandomizedSearchCV.  
 - **Model Evaluation**: Comparing accuracy, precision, recall, F1-score, and ROC-AUC scores.  
 
----
 
 **🚀 How to Get Started**  
 
@@ -48,7 +44,6 @@ This project provides a **comprehensive and structured analysis** of the Titanic
 3. Run each cell in sequence to explore, visualize, and analyze the dataset.  
 4. Modify the code to experiment with different preprocessing methods and algorithms.  
 
----
 
 **📂 Dataset Information**  
 
@@ -60,7 +55,6 @@ This project provides a **comprehensive and structured analysis** of the Titanic
   - Passenger Information: Age, gender, class, fare, number of family members.  
   - Survival Status: 1 (Survived), 0 (Did not survive).  
 
----
 
 **📌 Upcoming Enhancements: Data Merging and Joining Techniques**  
 
@@ -73,6 +67,5 @@ Planned operations:
 
 These data merging operations will be crucial for preparing a more comprehensive dataset for machine learning models.  
 
----
 
 💡 **This project is perfect for students, aspiring data scientists, and anyone looking to build a strong foundation in machine learning and data analysis. Stay tuned for future updates!** 🚀
