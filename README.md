@@ -45,7 +45,7 @@ graph LR
   C --> D[Results]
 ```
 
-### 🔍 EDA Flow
+### EDA Flow
 
 ```mermaid
 graph TD
