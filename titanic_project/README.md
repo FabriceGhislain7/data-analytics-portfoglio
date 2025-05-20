@@ -41,12 +41,12 @@ A complete **machine learning pipeline** for predicting survival outcomes on the
 
 ```bash
 # Clone the repository
-git clone https://github.com/FabriceGhislain7/data_analyst_scientist.git
+git clone https://github.com/FabriceGhislain7/data-analytics-projects.git
 ````
 
 ```bash
 # Navigate to the project folder
-cd data_analyst_scientist/titanic_project_python
+cd data_analyst_scientist/titanic_project
 ```
 
 ```bash

@@ -11,7 +11,7 @@ A curated repository of modular data analytics and machine learning projects. Ea
 ## Included Projects
 | Project              | Domain              | Description                                        | Launch                                                                                                                                   |
 | -------------------- | ------------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| **Titanic**          | ML Playground       | Survival prediction from structured passenger data | [🔗 Colab](https://colab.research.google.com/github/FabriceGhislain7/data_analyst_scientist/blob/main/titanic_project_python/main.ipynb) |
+| **Titanic**          | ML Playground       | Survival prediction from structured passenger data | [🔗 Colab](https://colab.research.google.com/github/FabriceGhislain7/data-analytics-projects/blob/main/titanic_project/main.ipynb) |
 | **Finance**          | Finance & Markets   | Financial forecasting and trend detection          | Coming Soon                                                                                                                              |
 | **Retail**           | Business Analytics  | Sales pattern, inventory demand forecasting        | Coming Soon                                                                                                                              |
 | **Climate**          | Climate Science     | Temperature trends, anomaly predictions            | Coming Soon                                                                                                                              |
