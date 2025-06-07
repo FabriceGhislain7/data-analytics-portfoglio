@@ -1,5 +1,44 @@
-"__pycache__/" 
-"*.csv" 
-"*.xlsx" 
-"*.json" 
-"data/" 
+# Dossiers Python à ignorer
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Données et fichiers temporaires
+*.csv
+*.xlsx
+*.json
+data/
+
+# Environnement virtuel
+venv/
+.env/
+.venv/
+
+# Fichiers de configuration ou sensibles
+.env
+*.env
+
+# Fichiers générés par Jupyter Notebook
+.ipynb_checkpoints/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Cache de l'IDE
+*.log
+*.sqlite3
+*.db
+
+# Dossiers d'IDE courants
+.vscode/
+.idea/
+__MACOSX/
+
+# Fichiers compilés
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
