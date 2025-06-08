@@ -54,29 +54,30 @@ It is designed for learning and prototyping data-driven applications with a comm
    ```
 
 ## Project Structure
-
 ```
 InventoryApp/
 │
-├── inventory_app/                # Main application package
-│   ├── __init__.py               # Package initializer
-│   ├── db.py                     # Database engine and session config
-│   ├── models.py                 # ORM models (Client, Product, Sale, etc.)
-│   ├── crud.py                   # Business logic and data access
-│   ├── cli.py                    # Command-line interface (argparse)
-│   └── web/                      # (Optional) Flask app components
+├── inventory_app/                    # Main application package
+│   ├── __init__.py                   # Initialize Python package
+│   ├── config.py                     # Configuration (e.g., database URL)
+│   ├── db.py                         # SQLAlchemy engine and session
+│   ├── models.py                     # ORM models: Client, Product, Sale, etc.
+│   ├── crud.py                       # Business logic and database interactions
+│   ├── cli.py                        # Command-line interface (argparse)
+│   └── web/                          # Flask app components (optional)
 │       ├── __init__.py
-│       ├── routes.py
-│       ├── templates/
-│       └── static/
+│       ├── routes.py                 # Flask routes
+│       ├── templates/                # HTML templates
+│       └── static/                   # CSS, JS, images
 │
-├── scripts/
-│   └── init_db.py                # Script to initialize database
+├── scripts/                          # One-time scripts or maintenance tools
+│   └── init_db.py                    # Create tables in the database
 │
-├── main.py                       # Entry point for CLI or web server
-├── requirements.txt              # Python dependencies
-├── .gitignore                    # Files and folders to exclude from Git
-└── README.md                     # Project documentation
+├── main.py                           # Main entry point: CLI or web server
+├── requirements.txt                  # Python dependencies
+├── README.md                         # Project documentation
+└── tests/                            # (Optional) Unit and integration tests
+    └── test_crud.py
 ```
 
 ## Features
