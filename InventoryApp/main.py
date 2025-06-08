@@ -1,7 +1,8 @@
+from scripts.init_db import init_db
 
 def main():
     print("SQLAlcheny Start!")
-    pass
+    init_db()
 
 if __name__ == "__main__":
     main()
