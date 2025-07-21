@@ -1,0 +1,12 @@
+/* Stili CSS personalizzati per l'app */
+.main-header {
+    text-align: center;
+    color: #FF6B6B;
+}
+
+.metric-card {
+    background-color: #F0F2F6;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid #FF6B6B;
+}
