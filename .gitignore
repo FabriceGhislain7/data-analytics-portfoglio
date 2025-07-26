@@ -5,10 +5,10 @@ __pycache__/
 *.pyd
 
 # Données et fichiers temporaires
-*.csv
-*.xlsx
-*.json
-data/
+# *.csv
+# *.xlsx
+# *.json
+# data/
 
 # Environnement virtuel
 venv/
