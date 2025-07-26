@@ -32,12 +32,12 @@ ENV/
 .env
 
 # Data files (se sono grandi)
-*.csv
-*.xlsx
-*.json
+# *.csv
+# *.xlsx
+# *.json
 
 # Jupyter Notebook
-.ipynb_checkpoints
+# .ipynb_checkpoints
 
 # Models
 *.pkl
