@@ -12,12 +12,57 @@ Data: 2025
 
 import os
 
-# Directory base del progetto
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+def find_project_root():
+    """
+    Trova la cartella root del progetto cercando file marker caratteristici.
+    Questo approccio funziona ovunque il progetto venga spostato.
+    """
+    current_path = os.path.dirname(os.path.abspath(__file__))
+    
+    # File/cartelle che indicano la root del progetto
+    project_markers = [
+        'requirements.txt',
+        'README.md', 
+        '.git',
+        'app.py',
+        'Home.py',
+        'src'
+    ]
+    
+    # Risali nella gerarchia fino a trovare la root
+    max_levels = 5  # Limite per evitare loop infiniti
+    for _ in range(max_levels):
+        # Controlla se esistono i marker nella cartella corrente
+        for marker in project_markers:
+            if os.path.exists(os.path.join(current_path, marker)):
+                return current_path
+        
+        # Se siamo già alla root del filesystem, fermati
+        parent_path = os.path.dirname(current_path)
+        if parent_path == current_path:
+            break
+            
+        current_path = parent_path
+    
+    # Se non trova la root, usa la cartella del file config
+    return os.path.dirname(os.path.abspath(__file__))
+
+# Trova automaticamente la root del progetto
+PROJECT_ROOT = find_project_root()
+
+# Directory struttura del progetto (percorsi relativi alla root)
+BASE_DIR = PROJECT_ROOT
 DATA_DIR = os.path.join(BASE_DIR, "src", "data")
 MODELS_DIR = os.path.join(BASE_DIR, "src", "models")
 ASSETS_DIR = os.path.join(BASE_DIR, "assets")
 STYLES_DIR = os.path.join(ASSETS_DIR, "styles")
+
+# Crea le directory se non esistono
+def ensure_directories():
+    """Crea le directory necessarie se non esistono"""
+    directories = [DATA_DIR, MODELS_DIR, ASSETS_DIR, STYLES_DIR]
+    for directory in directories:
+        os.makedirs(directory, exist_ok=True)
 
 # File di dati
 DATA_FILE = os.path.join(DATA_DIR, "data_titanic.csv")
@@ -122,7 +167,7 @@ HISTOGRAM_CONFIG = {
 # Configurazione pagina
 PAGE_CONFIG = {
     'page_title': 'Titanic Survival Analysis',
-    'page_icon': 'ship',
+    'page_icon': '🚢',
     'layout': 'wide',
     'initial_sidebar_state': 'expanded'
 }
@@ -141,7 +186,7 @@ APP_TEXTS = {
     ---
     Sviluppato con: Python, Streamlit, Pandas, Scikit-learn
     
-    Nota: Questa analisi e basata sui dati storici disponibili e serve per scopi educativi.
+    Nota: Questa analisi è basata sui dati storici disponibili e serve per scopi educativi.
     '''
 }
 
@@ -274,20 +319,21 @@ NOTEBOOK_SECTIONS = {
     }
 }
 
-# Funzioni utility
+# Funzioni utility aggiornate
 def get_data_path():
-    """Restituisce il percorso del file dati"""
+    """Restituisce il percorso del file dati come stringa"""
     return DATA_FILE
 
 def get_model_path(model_name):
     """Restituisce il percorso per salvare un modello"""
+    ensure_directories()  # Assicura che la directory esista
     return os.path.join(MODELS_DIR, f"{model_name}.pkl")
 
 def load_custom_css():
     """Carica CSS personalizzato se disponibile"""
     css_file = os.path.join(STYLES_DIR, "main.css")
     if os.path.exists(css_file):
-        with open(css_file) as f:
+        with open(css_file, 'r', encoding='utf-8') as f:
             return f.read()
     return ""
 
@@ -302,3 +348,33 @@ def format_percentage(value, decimals=1):
 def format_number(value, decimals=2):
     """Formatta un numero con decimali specificati"""
     return f"{value:.{decimals}f}"
+
+def get_project_info():
+    """Restituisce informazioni sul progetto e i percorsi"""
+    return {
+        'project_root': PROJECT_ROOT,
+        'config_location': os.path.abspath(__file__),
+        'data_directory': DATA_DIR,
+        'models_directory': MODELS_DIR,
+        'data_file_exists': os.path.exists(DATA_FILE),
+        'directories_created': all(os.path.exists(d) for d in [DATA_DIR, MODELS_DIR, ASSETS_DIR])
+    }
+
+# Inizializzazione automatica
+if __name__ == "__main__":
+    # Quando il file config viene eseguito direttamente, 
+    # mostra informazioni sui percorsi
+    ensure_directories()
+    info = get_project_info()
+    
+    print("=== TITANIC PROJECT CONFIGURATION ===")
+    print(f"Project Root: {info['project_root']}")
+    print(f"Config File: {info['config_location']}")
+    print(f"Data Directory: {info['data_directory']}")
+    print(f"Models Directory: {info['models_directory']}")
+    print(f"Data file exists: {info['data_file_exists']}")
+    print(f"All directories created: {info['directories_created']}")
+    
+    if not info['data_file_exists']:
+        print(f"\n⚠️  Data file not found at: {DATA_FILE}")
+        print("Download it from:", DATA_URL)
